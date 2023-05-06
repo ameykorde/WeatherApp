@@ -1,0 +1,280 @@
+body{
+    background: #010409;
+    background-image: url("images/landing_page.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+}
+
+hr{
+    width: 75%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+body :first-child{
+    display: flex;
+    padding: 0;
+}
+
+
+/*-------------------------- scroll bar ------------------------------*/
+
+::-webkit-scrollbar{
+    width: 0.3rem;
+}
+::-webkit-scrollbar-track{
+    background: black;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(19, 75, 93);
+}
+
+
+/*######### Landing Page Information #########*/
+
+
+/*------ Right side information box ----*/
+
+.box{
+    height: 100vh; 
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    float : right;
+    backdrop-filter: blur(10px);
+    overflow: auto;
+}
+
+.form{
+    margin: 15% 15% 5%;
+
+}
+
+/* ------ Search Input --------- */
+
+input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    border-color: rgb(70, 78, 85);
+    width: 80%;
+    font-size: 1.2rem;
+    padding: 1%;
+    color: white;
+    margin-bottom: 10%;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.5;
+  }
+
+/*---- icon -----*/
+
+.fa-solid{
+    color: aliceblue;
+    opacity: 0.7;
+    margin: 2%;
+    font-size: larger;
+}
+
+
+/* -------------Left side Main Information ---------- */
+
+.left-info-before{
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+}
+.left-info-before img{
+    height: 20rem;
+    width: 22rem; 
+}
+
+.info-text{
+    padding: 0 15%;
+}
+
+.left-info-before button{
+    box-shadow: rgba(117, 66, 66, 0.35) 0px 5px 15px;
+    margin: 3% 0 10%;
+    color: white;
+    padding: 1% 2% ;
+}
+
+/*######### After Loading Temperature Information #########*/
+
+.temperature{
+    align-items: flex-end;
+    margin: 0 0 10% 15%;
+}
+
+.degree {
+    font-family: 'Jost', sans-serif;
+    font-size: 8rem;
+}
+
+.city{
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+
+.city h1{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 3rem;
+    
+}
+
+.city h6{
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 0.09rem;
+    margin-left: 2%;
+}
+
+.cloud{
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    margin: 0 0 5% 5%;
+}
+
+/* ----------right side box------------- */
+
+.weather-details{
+    padding: 5% 15% 0%;
+}
+
+.weather-details h5{
+    font-family: 'DM Sans', sans-serif;
+    opacity: 0.9;
+}
+
+.weather-details-info{
+    margin: 15% 1%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.9;
+}
+
+.error-message{
+    text-align: center;
+}
+
+/*-- Forecast Details  -- */
+
+.daily-forecast-button{
+    padding: 2% 4% !important; 
+    border-radius: 10px;
+    margin: auto;
+}
+
+.forecast-detail{
+    padding: 5% 15% 0%;
+}
+
+.forecast-detail-data{
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecast-detail img{
+    height: 50px;
+    width: 50px;
+}
+
+.forecast-detail h6{
+    font-size: 0.95rem;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 768px) {
+    /* Adjust styles for screens with a maximum width of 768px */
+  
+    body :first-child {
+      display: block; /* Change from flex to block */
+      padding: 0;
+    }
+  
+    .box {
+      height: auto; /* Make the height dynamic */
+      width: 100%; /* Change to full width */
+      float: none; /* Remove float */
+    }
+  
+    .left-info-before {
+      height: auto; /* Make the height dynamic */
+    }
+  
+    .left-info-before img {
+      height: 10rem; /* Decrease the size of the image */
+      width: 11rem;
+    }
+  
+    .info-text {
+      padding: 0 5%; /* Decrease the padding */
+    }
+  
+    .temperature {
+      margin: 0 0 10% 5%; /* Adjust margins */
+    }
+  
+    .degree {
+      font-size: 6rem; /* Decrease font size */
+    }
+  
+    .city h1 {
+      font-size: 2rem; /* Decrease font size */
+    }
+  
+    .city h6 {
+      font-size: 0.9rem; /* Decrease font size */
+    }
+  
+    .weather-details {
+      padding: 5% 5% 0; /* Decrease the padding */
+    }
+  
+    .forecast-detail {
+      padding: 5% 5% 0; /* Decrease the padding */
+    }
+  
+  }
+  
+  @media only screen and (max-width: 480px) {
+    /* Adjust styles for screens with a maximum width of 480px */
+  
+    .box {
+      box-shadow: none; /* Remove box-shadow */
+    }
+  
+    .left-info-before button {
+      font-size: 0.8rem; /* Decrease font size */
+    }
+  
+    .degree {
+      font-size: 4rem; /* Decrease font size */
+    }
+  
+    .city h1 {
+      font-size: 1.5rem; /* Decrease font size */
+    }
+  
+    .city h6 {
+      font-size: 0.7rem; /* Decrease font size */
+    }
+  
+    .daily-forecast-button {
+      font-size: 0.8rem; /* Decrease font size */
+    }
+  
+    .forecast-detail h6 {
+      font-size: 0.8rem; /* Decrease font size */
+    }
+  }
